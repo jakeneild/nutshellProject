@@ -1,4 +1,6 @@
 let login = require("./login")
 let displayHome = require("./displayHome")
 
-displayHome();
+//displayHome();
+
+login.displayLogin();

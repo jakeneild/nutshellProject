@@ -1,3 +1,75 @@
+/*Login page styles*/
+
+#loginPageDiv{
+    width: 35em;
+    height: 15em;
+    background-color: lightcyan;
+    border-radius: 35px;
+    padding: 3em;
+    display: flex;
+    margin: auto;
+    margin-top: 10em;
+}
+
+#newUserDiv{
+    width: 49%;
+    border-left: 2px solid darkgray;
+    height: 100%;
+    padding-left: 2em;
+}
+
+#loginDiv{
+    width: 49%;
+    height: 100%;
+    padding-left: 2em;
+}
+
+
+/*Main page styles*/
+
+
+#friendDiv{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
 .bold {
     font-weight: bold;
+}
+
+article{
+    display: flex;
+}
+
+#eventsDiv{
+    width: 49%;
+    background-color: lightgray;
+    padding: 1em;
+}
+
+#articlesDiv{
+    width: 49%;
+    background-color: lightgray;
+    border-left: 2px solid darkgrey;
+    padding: 1em;
+}
+
+#friendsDiv{
+    width: 32%;
+    overflow-y: scroll;
+    background-color: slategray;
+    padding: 1em;
+}
+
+#contentDiv {
+    background-color: lightgrey;
+    width: 65%
+}
+
+#wallTItle{
+    width: 100%
+}
+
+#eventsArticles{
+    display: flex;
 }

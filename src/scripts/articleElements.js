@@ -1,9 +1,9 @@
 //takes in an array of objects and retuns HTML Elements
 
 let articleElements = function(array){
-    let frag = document.createDocumentFragment();
+    let aDiv = $("<div>").attr("id", "articlesSubDiv")
     for(let i = 0; i < array.length; i++){ //iterates through array
-        frag.append(
+        aDiv.append(
             $("<div>").attr("id", "articleDiv").append(
                 $("<div>").attr("id", "articleInfoDiv").append(
                     $("<h2>").text(array[i].title),
@@ -15,7 +15,7 @@ let articleElements = function(array){
             )
         )
     }
-    return frag;
+    return aDiv;
 }
 
 module.exports = articleElements
