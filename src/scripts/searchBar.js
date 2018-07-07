@@ -9,25 +9,43 @@ let searchBar = function () {
         $("#resultsDiv").html(" "); //clears the search results
 
         let query = $("#searchBar").val();
-
         if (query.length > 0) {
-            $.ajax({
-                url: "http://localhost:3000/users",
-                method: "GET"
-            })
-                .then(users => {
-                    friendsArr = []
-                    for (let i = 0; i < users.length; i++) {
-                        if (users[i].name.includes(query)) {
-                            friendsArr.push(users[i])
-                        }
+            let getFriendships = function () {
+                return $.ajax({
+                    url: "http://localhost:3000/friendships",
+                    method: "GET",
+                });
+            };
+
+            let getFriendRequests = function () {
+                return $.ajax({
+                    url: "http://localhost:3000/friendRequests",
+                    method: "GET",
+                });
+            };
+
+            let getUsers = function () {
+                return $.ajax({
+                    url: "http://localhost:3000/users",
+                    method: "GET",
+                });
+            }
+
+            Promise.all([getFriendships(), getFriendRequests(), getUsers()]).then(([friendships, friendRequests, users]) => {
+                friendsArr = []
+                for (let i = 0; i < users.length; i++) {
+                    if (users[i].name.includes(query)) {
+                        friendsArr.push(users[i])
                     }
-                    $("#resultsDiv").append(friendsElements(friendsArr))
-                    console.log("appending search result", friendsElements(friendsArr))
-                })
+                }
+                $("#resultsDiv").append(friendsElements(friendsArr, friendships, friendRequests))
+                while (document.querySelector("#resultsDiv").childElementCount > 1) {
+                    document.querySelector("#resultsDiv").removeChild(document.querySelector("#resultsDiv").firstChild.nextSibling)
+                }
+
+            })
         }
     })
-
     return $("<div>").attr("id", "searchDiv").append(searchBarText, bar, resultsDiv)
 }
 

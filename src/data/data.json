@@ -3,19 +3,19 @@
     {
       "name": "Erin Thomas",
       "password": "Erin",
-      "id": 0,
+      "id": "0",
       "picture": ""
     },
     {
       "name": "Todd Jeffery",
       "password": "Todd",
-      "id": 1,
+      "id": "1",
       "picture": ""
     },
     {
       "name": "Emily Matthews",
       "password": "Emily",
-      "id": 2,
+      "id": "2",
       "picture": ""
     },
     {
@@ -39,9 +39,14 @@
   ],
   "friendships": [
     {
-      "id": 0,
-      "f1": 1,
-      "f2": 2
+      "id": "0",
+      "f1": "1",
+      "f2": "2"
+    },
+    {
+      "id": "1",
+      "f1": "3",
+      "f2": "1"
     }
   ],
   "articles": [
@@ -50,19 +55,19 @@
       "summary": "The north korean military has entered into a peace aggreement with South Korea and the US forces.",
       "url": "https://www.google.com",
       "photo": "",
-      "id": 0
+      "id": "0"
     }
   ],
   "userArticles": [
     {
-      "id": 0,
-      "user": 1,
-      "article": 0
+      "id": "0",
+      "user": "1",
+      "article": "0"
     }
   ],
   "events": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Rally for peace",
       "photo": "",
       "summary": "Do you want peace in the Middle East?  Come support the cause!",
@@ -72,20 +77,62 @@
   ],
   "userEvents": [
     {
-      "id": 0,
-      "user": 2,
-      "event": 0
+      "id": "0",
+      "user": "2",
+      "event": "0"
     }
   ],
   "messages": [
     {
-      "id": 0,
-      "to": 2,
-      "from": 1,
+      "id": "0",
+      "to": "2",
+      "from": "1",
       "content": "Hi Emily, how are you?"
+    },
+    {
+      "id": "1",
+      "to": "1",
+      "from": "3",
+      "content": "What's up man"
+    },
+    {
+      "id": "2",
+      "to": "1",
+      "from": "3",
+      "content": "Let's look at some stuff"
+    },
+    {
+      "id": "3",
+      "to": "1",
+      "from": "3",
+      "content": "More messages"
     }
   ],
   "friendRequests": [
-    {}
+    {
+      "id": "0",
+      "to": "3",
+      "from": "1"
+    },
+    {
+      "id": "1",
+      "to": "3",
+      "from": "3"
+    },
+    {
+      "id": "2",
+      "to": "4",
+      "from": "3"
+    },
+    {
+      "id": "3",
+      "to": "0",
+      "from": "3"
+    },
+    {
+      "id": "4",
+      "to": "2",
+      "from": "3"
+    }
   ]
 }

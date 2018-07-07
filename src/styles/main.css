@@ -27,10 +27,30 @@
 
 /*Main page styles*/
 
+#messageBox{
+    margin-top: 2em;
+    height: 20em;
+    width: 100%;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    outline: 1px solid white;
+}
 
-#friendDiv{
+#messageHeader{
+    color: white;
+    background-color: darkblue;
+}
+
+#messageBody{
+    height: 85%;
+    overflow-y: scroll;
+}
+
+
+.friendDiv{
     background-color: lightgray;
     border-radius: 5px;
+    display: flex;
 }
 
 .bold {
@@ -39,6 +59,10 @@
 
 article{
     display: flex;
+}
+
+#wallTitle{
+    margin-left: 3em;
 }
 
 #eventsDiv{
